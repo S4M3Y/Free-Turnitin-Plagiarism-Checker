@@ -1,8 +1,7 @@
 >[!IMPORTANT]
-> The site is currently facing functional issues. If it is not working, it will be fixed soon.  
-> In the meantime, if you need a [Turnitin report PDF](https://www.turnitin.com/) for anything, you can reach out to me at **[NOT NOW]**.  
-> I will share the report PDF whenever I get free and see your request. Please wait patiently.  
-> ⭐ Don’t forget to star the repo and support the work!
+> Exact Turnitin reports are no longer available. The previous Turnitin endpoints were removed or fixed, and the maintainer’s Turnitin class access — the route that used to email free reports — has ended as well.
+> This project now does a basic public-web similarity check. It cannot search research-paper or IEEE databases. The maintainer is looking for a way to offer free Turnitin-style reports again and will update the project if that access returns.
+> Details are on the in-app About page.
 
 # **Turnitin Free Plagiarism Checker**
 
