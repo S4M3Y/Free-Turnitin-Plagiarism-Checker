@@ -269,8 +269,7 @@ const Index = () => {
                 <div className="progress-fill" style={{ width: `${progress.percent}%` }} />
               </div>
               <p className="status-line" aria-live="polite">
-                {progress.message}
-                {progress.total ? ` · ${progress.completed} of ${progress.total}` : ""} · {progress.percent}%
+                {progress.message} · {progress.percent}%
               </p>
             </div>
           )}
