@@ -297,13 +297,13 @@ export function buildPlagiarismPdf(report = {}) {
   doc.centered("Public-web overlap only. Not a Turnitin report.", 10, false, [0.36, 0.38, 0.4], doc.y);
   doc.gap(18);
   doc.centered(`Generated ${formatWhen(report.checkedAt)}`, 10, false, [0.36, 0.38, 0.4], doc.y);
-  doc.gap(22);
+  doc.gap(16);
   doc.line();
-  doc.gap(8);
+  doc.gap(46);
   doc.centered(percentLabel, 36, true, [0.07, 0.09, 0.12], doc.y);
-  doc.gap(42);
+  doc.gap(48);
   doc.centered("Overall similarity", 11, false, [0.32, 0.34, 0.36], doc.y);
-  doc.gap(20);
+  doc.gap(22);
   if (report.summary) {
     doc.flowPlain(report.summary, { size: 11, color: [0.16, 0.18, 0.2] });
     doc.gap(6);
@@ -400,8 +400,8 @@ export function buildPlagiarismPdf(report = {}) {
     const data = headerAndFooter(ops, index + 1, pageCount);
     return add(`<< /Length ${byteLength(data)} >>\nstream\n${data}endstream`);
   });
-  const fontRegular = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
-  const fontBold = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>");
+  const fontRegular = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>");
+  const fontBold = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>");
   const gsOpaque = add("<< /Type /ExtGState /ca 1 /CA 1 >>");
   const gsSoft = add("<< /Type /ExtGState /ca 0.22 /CA 0.22 >>");
   const pagesId = objects.length + 1 + doc.pages.length;

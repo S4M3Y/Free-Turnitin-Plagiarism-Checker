@@ -428,6 +428,7 @@ button:disabled {
   margin-top: 1.6rem;
   display: grid;
   gap: 1rem;
+  scroll-margin-top: 4.5rem;
 }
 
 .report-hero .score-card {
@@ -442,6 +443,7 @@ button:disabled {
 
 .report-download {
   margin-top: 1rem;
+  width: 100%;
 }
 
 .note-stack {
