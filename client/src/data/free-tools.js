@@ -4,7 +4,7 @@ export const plagiarismTools = [
   {
     name: "Plagiarism.Free",
     url: "https://plagiarism.free/",
-    logo: "/logos/plagiarism-free.svg",
+    logo: "/logos/plagiarism-free.png",
     kind: "Plagiarism",
     account: "No account for the free tier.",
     limit:

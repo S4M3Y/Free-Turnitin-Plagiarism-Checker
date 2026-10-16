@@ -217,13 +217,15 @@
 }
 
 .turnitin-mark {
-  height: 32px;
-  width: auto;
-  flex: 0 0 auto;
+  display: block;
+  height: 34px;
+  width: 113px;
+  max-width: none;
+  flex: 0 0 113px;
+  object-fit: contain;
+  object-position: left center;
   background: #fff;
-  border-radius: 8px;
-  padding: 4px 8px;
-  box-shadow: inset 0 0 0 1px rgba(0, 60, 70, 0.12);
+  border-radius: 6px;
 }
 
 .quiet-note a {
