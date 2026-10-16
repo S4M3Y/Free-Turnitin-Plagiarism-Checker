@@ -141,7 +141,7 @@ function pageStream(pageLines, pageNumber, pageCount) {
     "/F2 9 Tf",
     "0 0 0 rg",
     `1 0 0 1 ${MARGIN_X} 820 Tm`,
-    "(PlagCheck similarity report) Tj",
+    "(Turnitout similarity report) Tj",
     "ET",
     "0.35 0.35 0.35 rg",
     "BT",

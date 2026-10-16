@@ -1,56 +1,61 @@
 import { Link } from "wouter";
+import { Compass, Globe, Mail, Unplug } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <div className="page">
       <header className="page-intro">
-        <p className="kicker">About this project</p>
-        <h1>What this checker can and cannot do</h1>
+        <p className="kicker">A note from me</p>
+        <h1>What I can still check for you</h1>
       </header>
-      <div className="prose-stack">
-        <article className="prose-card">
-          <h2>Turnitin reports</h2>
+      <article className="letter">
+        <div className="story-row">
+          <span className="story-icon" aria-hidden="true">
+            <Mail size={16} />
+          </span>
           <p>
-            Turnitin’s previous endpoints are no longer accessible. They were removed or fixed by the Turnitin team,
-            so this project no longer supports exact Turnitin reports.
+            I used to send you plagiarism reports by email, free of cost, from my Turnitin class. My Turnitin class
+            subscription has ended, so I can’t do that anymore.
           </p>
-        </article>
-        <article className="prose-card">
-          <h2>The old class route</h2>
+        </div>
+        <div className="story-row">
+          <span className="story-icon" aria-hidden="true">
+            <Unplug size={16} />
+          </span>
           <p>
-            The maintainer used to help students for free by emailing plagiarism reports from a Turnitin class. That
-            class access has ended, so that route is gone too.
+            Turnitin’s old endpoints were removed or fixed by their team, so this project can’t produce exact Turnitin
+            reports anymore.
           </p>
-        </article>
-        <article className="prose-card">
-          <h2>What still runs</h2>
+        </div>
+        <div className="story-row">
+          <span className="story-icon" aria-hidden="true">
+            <Globe size={16} />
+          </span>
           <p>
-            This tool currently provides basic plagiarism checking from internet access. It searches public web pages
-            and compares your text with what those pages actually contain. It can no longer check against research-paper
-            or IEEE databases, because those endpoints are lost.
+            What runs here now is a basic check against public web pages. I no longer have access to research-paper or
+            IEEE databases. The percentage only covers passages I compared. A low score is not proof your writing is
+            original, and it is not a Turnitin similarity index.
           </p>
-          <p style={{ marginTop: "0.7rem" }}>
-            A score describes only the passages that were compared. It is not a Turnitin similarity index, and a low
-            score is not proof that a document is original.
-          </p>
-        </article>
-        <article className="prose-card">
-          <h2>What the maintainer is doing next</h2>
+        </div>
+        <div className="story-row">
+          <span className="story-icon" aria-hidden="true">
+            <Compass size={16} />
+          </span>
           <p>
-            The maintainer is working on finding a better way to offer free Turnitin-style reports again, and will
-            update the project if access returns.
+            I’m looking for a better way to get you free Turnitin-style reports again. If I get access back, I’ll update
+            this.
           </p>
-          <p style={{ marginTop: "0.7rem" }}>
-            Your document is compared on this server with pages fetched from the public web. Checks you choose to keep
-            stay in this browser’s history. The app does not add a new analytics service.
-          </p>
-          <p style={{ marginTop: "0.9rem" }}>
-            <Link href="/tools">Other free checkers</Link>
-            {" · "}
-            <Link href="/">Back to the checker</Link>
-          </p>
-        </article>
-      </div>
+        </div>
+        <p>
+          Your text is compared on this server with public pages. If you keep a result, it stays in this browser. I
+          don’t add a new analytics service.
+        </p>
+        <p>
+          <Link href="/tools">Other free checkers</Link>
+          {" · "}
+          <Link href="/">Back to your document</Link>
+        </p>
+      </article>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
-import { Loader2 } from "lucide-react";
+import { FileText, Loader2, Quote } from "lucide-react";
 import { checkTextSchema } from "@shared/schema.js";
 import { createHistoryStore, toHistoryRecord } from "@shared/history-store.js";
 import ReportView from "@/components/ReportView";
@@ -184,19 +184,25 @@ const Index = () => {
     <div className="page">
       <header className="page-intro">
         <p className="kicker">Document check</p>
-        <h1>Check a document against the public web</h1>
+        <h1>See what the public web already says</h1>
         <p className="lede" style={{ maxWidth: "40rem", marginTop: "0.8rem" }}>
-          Paste text or open a plain-text file. The score comes from passages actually compared with pages this server can fetch.
+          Paste your writing, or open a plain-text file. I only score the passages I actually compare with pages I can fetch.
         </p>
         <p className="quiet-note">
-          <Link href="/about">Exact Turnitin reports are no longer available.</Link> This page runs the basic internet check.
+          <img className="turnitin-mark" src="/logos/turnitin.svg" alt="Turnitin" />
+          <span>
+            I used to email you free Turnitin reports from my class. I can’t anymore.{" "}
+            <Link href="/about">Here’s what changed.</Link>
+          </span>
         </p>
       </header>
 
       <div className="check-layout">
         <section className="panel panel-pad" data-testid="card-input" aria-labelledby="document-heading">
           <div className="row-between" style={{ marginBottom: "0.6rem" }}>
-            <h2 id="document-heading" style={{ fontSize: "1.15rem" }}>Document</h2>
+            <h2 id="document-heading" className="section-label" style={{ fontSize: "1.15rem" }}>
+              <FileText size={18} aria-hidden="true" /> Document
+            </h2>
             <label className="file-button">
               Open text
               <input
@@ -230,7 +236,9 @@ const Index = () => {
         </section>
 
         <aside className="panel panel-pad">
-          <h2 style={{ fontSize: "1.15rem" }}>Submission</h2>
+          <h2 className="section-label" style={{ fontSize: "1.15rem" }}>
+            <Quote size={18} aria-hidden="true" /> Submission
+          </h2>
           <label className="check-option">
             <input
               type="checkbox"

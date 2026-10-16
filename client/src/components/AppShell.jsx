@@ -21,7 +21,7 @@ export default function AppShell({ children }) {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     try {
-      localStorage.setItem("plagcheck-theme", theme);
+      localStorage.setItem("turnitout-theme", theme);
     } catch {
       /* storage can be unavailable in private modes */
     }
@@ -40,7 +40,7 @@ export default function AppShell({ children }) {
               <path d="M5 6.5h6.5M5 9h4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
             </svg>
           </span>
-          PlagCheck
+          Turnitout
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {LINKS.map((link) => (

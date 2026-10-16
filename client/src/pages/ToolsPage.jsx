@@ -4,7 +4,8 @@ function ToolCard({ tool }) {
   return (
     <article className="tool-card">
       <p className="kicker">{tool.kind}</p>
-      <h2>
+      <h2 className="tool-heading">
+        <img className="tool-logo" src={tool.logo} alt="" />
         <a href={tool.url} target="_blank" rel="noopener noreferrer">
           {tool.name}
         </a>
@@ -24,8 +25,8 @@ export default function ToolsPage() {
         <p className="kicker">Free tools</p>
         <h1>Other checkers you can open yourself</h1>
         <p className="lede" style={{ maxWidth: "42rem", marginTop: "0.8rem" }}>
-          These links leave this app. Nothing you paste here is sent to them. Limits below were read from each site’s
-          public pages on {verifiedOn}. Where a site did not state a number, the gap is left as a gap.
+          These open in a new tab. I don’t send your document to them. I read each limit on the site itself on{" "}
+          {verifiedOn}. If they didn’t publish a number, I left that gap.
         </p>
       </header>
       <h2 style={{ marginTop: "1.6rem", letterSpacing: "-0.03em" }}>Plagiarism</h2>

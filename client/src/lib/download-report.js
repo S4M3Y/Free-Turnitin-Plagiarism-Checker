@@ -7,7 +7,7 @@ export function downloadReport(report) {
   const stamp = (report?.checkedAt || new Date().toISOString()).slice(0, 10);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `similarity-report-${stamp}.pdf`;
+  link.download = `turnitout-report-${stamp}.pdf`;
   document.body.appendChild(link);
   link.click();
   link.remove();

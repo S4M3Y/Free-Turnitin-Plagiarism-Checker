@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlagCheck — Public web similarity</title>
+    <title>Turnitout — Public web similarity</title>
     <meta name="description" content="Free plagiarism checker that compares your text with public web pages." />
-    <meta name="author" content="PlagCheck" />
-    <meta property="og:title" content="PlagCheck — Public web similarity" />
+    <meta name="author" content="Turnitout" />
+    <meta property="og:title" content="Turnitout — Public web similarity" />
     <meta property="og:description" content="Free plagiarism checker that compares your text with public web pages." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <script>
       try {
-        if (localStorage.getItem("plagcheck-theme") === "dark") {
+        if ((localStorage.getItem("turnitout-theme") || localStorage.getItem("plagcheck-theme")) === "dark") {
           document.documentElement.classList.add("dark");
         }
       } catch (error) {}

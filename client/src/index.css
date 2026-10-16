@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 0 0% 8%;
+    --background: 204 45% 97%;
+    --foreground: 193 55% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 193 55% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 94%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 93%;
-    --muted-foreground: 0 0% 32%;
-    --accent: 0 0% 93%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 72% 38%;
+    --popover-foreground: 193 55% 12%;
+    --primary: 204 100% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 204 40% 94%;
+    --secondary-foreground: 193 55% 14%;
+    --muted: 204 35% 94%;
+    --muted-foreground: 193 18% 32%;
+    --accent: 168 55% 92%;
+    --accent-foreground: 174 80% 18%;
+    --destructive: 0 72% 42%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 86%;
-    --input: 0 0% 86%;
-    --ring: 0 0% 9%;
+    --border: 200 24% 84%;
+    --input: 200 24% 84%;
+    --ring: 204 100% 40%;
     --radius: 1rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 9%;
@@ -32,29 +32,29 @@
     --sidebar-accent-foreground: 0 0% 9%;
     --sidebar-border: 0 0% 86%;
     --sidebar-ring: 0 0% 9%;
-    --shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    --shadow: 0 18px 40px rgba(0, 60, 90, 0.08);
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 96%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 96%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 96%;
-    --primary: 0 0% 96%;
-    --primary-foreground: 0 0% 8%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 96%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 72%;
-    --accent: 0 0% 14%;
-    --accent-foreground: 0 0% 96%;
-    --destructive: 0 62% 62%;
-    --destructive-foreground: 0 0% 8%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 96%;
+    --background: 196 40% 7%;
+    --foreground: 190 30% 96%;
+    --card: 196 32% 11%;
+    --card-foreground: 190 30% 96%;
+    --popover: 196 32% 11%;
+    --popover-foreground: 190 30% 96%;
+    --primary: 204 100% 58%;
+    --primary-foreground: 196 50% 8%;
+    --secondary: 196 24% 16%;
+    --secondary-foreground: 190 30% 96%;
+    --muted: 196 24% 16%;
+    --muted-foreground: 190 15% 74%;
+    --accent: 174 30% 16%;
+    --accent-foreground: 168 60% 82%;
+    --destructive: 0 70% 64%;
+    --destructive-foreground: 196 50% 8%;
+    --border: 196 18% 22%;
+    --input: 196 18% 22%;
+    --ring: 204 100% 58%;
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 96%;
     --sidebar-primary: 0 0% 96%;
@@ -81,13 +81,17 @@
   }
 
   :focus-visible {
-    outline: 2px solid hsl(var(--foreground));
+    outline: 2px solid hsl(var(--primary));
     outline-offset: 3px;
   }
 
   ::selection {
-    background: hsl(var(--foreground));
-    color: hsl(var(--background));
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  h1, .report-title {
+    font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   }
 }
 
@@ -139,8 +143,8 @@
   display: grid;
   place-items: center;
   border-radius: 0.55rem;
-  background: hsl(var(--foreground));
-  color: hsl(var(--background));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .nav-links {
@@ -159,9 +163,9 @@
 }
 
 .nav-links a[aria-current="page"] {
-  color: hsl(var(--foreground));
+  color: hsl(var(--primary));
   background: hsl(var(--card));
-  box-shadow: inset 0 0 0 1px hsl(var(--border));
+  box-shadow: inset 0 0 0 1px hsl(var(--primary) / 0.35);
 }
 
 .theme-toggle {
@@ -184,10 +188,16 @@
 
 .page-intro h1,
 .report-title {
-  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-size: clamp(2.15rem, 4.4vw, 3.5rem);
   line-height: 1.02;
-  letter-spacing: -0.045em;
-  font-weight: 640;
+  letter-spacing: -0.035em;
+  font-weight: 650;
+  color: hsl(193 60% 14%);
+}
+
+.dark .page-intro h1,
+.dark .report-title {
+  color: hsl(var(--foreground));
 }
 
 .lede,
@@ -197,8 +207,23 @@
 }
 
 .quiet-note {
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  max-width: 40rem;
+  font-size: 0.98rem;
+  color: hsl(var(--foreground));
+}
+
+.turnitin-mark {
+  height: 32px;
+  width: auto;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: inset 0 0 0 1px rgba(0, 60, 70, 0.12);
 }
 
 .quiet-note a {
@@ -222,6 +247,7 @@
 .panel {
   background: hsl(var(--card));
   border: 1px solid hsl(var(--border));
+  border-top: 3px solid hsl(var(--primary));
   border-radius: 1.3rem;
   box-shadow: var(--shadow);
 }
@@ -279,9 +305,13 @@
 }
 
 .primary-button {
-  background: hsl(var(--foreground));
-  color: hsl(var(--background));
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
   border: 0;
+}
+
+.primary-button:hover:not(:disabled) {
+  filter: brightness(0.94);
 }
 
 .secondary-button,
@@ -364,7 +394,7 @@ button:disabled {
 
 .progress-fill {
   height: 100%;
-  background: hsl(var(--foreground));
+  background: linear-gradient(90deg, hsl(204 100% 42%), hsl(174 70% 38%));
   width: 0;
   transition: width 0.25s ease;
 }
@@ -432,8 +462,8 @@ button:disabled {
   padding: 0.15rem 0.55rem;
   font-size: 0.78rem;
   letter-spacing: 0.01em;
-  background: hsl(var(--foreground));
-  color: hsl(var(--background));
+  background: hsl(var(--primary));
+  color: white;
   white-space: nowrap;
 }
 
@@ -475,9 +505,68 @@ button:disabled {
 
 .kicker {
   font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--primary));
+  font-weight: 700;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.letter {
+  margin-top: 1.2rem;
+  padding: 1.4rem 1.4rem 1.2rem;
+  border-radius: 1.3rem;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-left: 4px solid hsl(var(--primary));
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.95rem;
+  max-width: 44rem;
+}
+
+.letter p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.story-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.story-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.7rem;
+  display: grid;
+  place-items: center;
+  background: hsl(var(--secondary));
+  color: hsl(var(--primary));
+}
+
+.tool-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0.2rem 0 0.45rem;
+}
+
+.tool-logo {
+  height: 36px;
+  width: auto;
+  max-width: 148px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 3px 6px;
 }
 
 .prose-stack,
