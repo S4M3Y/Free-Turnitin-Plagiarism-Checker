@@ -1,8 +1,7 @@
 >[!IMPORTANT]
-> The site is currently facing functional issues. If it is not working, it will be fixed soon.  
-> In the meantime, if you need a [Turnitin report PDF](https://www.turnitin.com/) for anything, you can reach out to me at **[NOT NOW]**.  
-> I will share the report PDF whenever I get free and see your request. Please wait patiently.  
-> ⭐ Don’t forget to star the repo and support the work!
+> I used to email you plagiarism reports for free from my Turnitin class. That subscription has ended, so I can’t do that anymore.
+> Turnitin’s old endpoints were removed or fixed by their team, so this project can’t produce exact Turnitin reports. What runs now is a basic check against public web pages. I no longer have access to research-paper or IEEE databases.
+> I’m looking for a way to get you free Turnitin-style reports again. If I get access back, I’ll update this. The full note is on the in-app About page.
 
 # **Turnitin Free Plagiarism Checker**
 
